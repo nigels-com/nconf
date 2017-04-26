@@ -7,7 +7,7 @@ http://www.nconf.org/
 NEMS homepage:
 http://baldnerd.com/nems/
 
-**THIS VERSION HAS BEEN RE-WORKED TO OPERATE UNDER PHP 7.0+**
+**THIS VERSION HAS BEEN RE-WORKED BY ROBBIE FERGUSON TO OPERATE UNDER PHP 7.0+**
 
 Start guide:
 http://www.nconf.org/dokuwiki/doku.php?id=nconf:help:documentation:start:main
