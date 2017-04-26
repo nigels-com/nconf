@@ -145,7 +145,7 @@ $status = flock($generate_lock_handle, LOCK_EX | LOCK_NB); //lock the file
 
 <?php
 
-//mysql_close($dbh);
+//mysqli_close($dbh);
 require_once 'include/foot.php';
 
 ?>
