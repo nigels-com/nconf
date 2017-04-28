@@ -1,0 +1,594 @@
+  0/54 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%
+  5/54 [▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░]   9%
+ 10/54 [▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░]  18%
+ 15/54 [▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░]  27%
+ 20/54 [▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░]  37%
+ 25/54 [▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░]  46%
+ 30/54 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░]  55%
+ 35/54 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░]  64%
+
+
+ 54/54 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100% ------ ------------------------------------------ 
+  Line   UPDATE_/1.2.6_to_1.3.0/version_check.php  
+ ------ ------------------------------------------ 
+  5      Function mysqli_query not found.          
+  5      Undefined variable: $dbh                  
+  5      Undefined variable: $dbh                  
+  6      Function mysqli_fetch_assoc not found.    
+ ------ ------------------------------------------ 
+
+ ------ ---------------------------------------------------- 
+  Line   UPDATE_/1.2.6_to_1.3.0/pre_db_update_extension.php  
+ ------ ---------------------------------------------------- 
+  13     Function table_row_description not found.           
+  36     Function table_row_description not found.           
+  39     Function table_row_check not found.                 
+  42     Function table_row_description not found.           
+  43     Function table_row_description not found.           
+  47     Function table_row_description not found.           
+  58     Function table_row_description not found.           
+  70     Function table_row_description not found.           
+ ------ ---------------------------------------------------- 
+
+ ------ ------------------------------------------ 
+  Line   UPDATE_/1.2.5_to_1.2.6/version_check.php  
+ ------ ------------------------------------------ 
+  5      Function mysqli_query not found.          
+  5      Undefined variable: $dbh                  
+  5      Undefined variable: $dbh                  
+  6      Function mysqli_fetch_assoc not found.    
+ ------ ------------------------------------------ 
+
+ ------ ------------------------------------------ 
+  Line   UPDATE_/1.2.4_to_1.2.5/version_check.php  
+ ------ ------------------------------------------ 
+  4      Function mysqli_query not found.          
+  4      Undefined variable: $dbh                  
+  4      Undefined variable: $dbh                  
+  12     Function mysqli_query not found.          
+  12     Undefined variable: $dbh                  
+  12     Undefined variable: $dbh                  
+  13     Function mysqli_fetch_assoc not found.    
+ ------ ------------------------------------------ 
+
+ ------ ------------------------------ 
+  Line   include/tabs/service.php      
+ ------ ------------------------------ 
+  32     Undefined variable: $host_ID  
+  37     Undefined variable: $host_ID  
+ ------ ------------------------------ 
+
+ ------ -------------------------------- 
+  Line   include/tabs/info.php           
+ ------ -------------------------------- 
+  28     Function js_prepare not found.  
+ ------ -------------------------------- 
+
+ ------ ------------------------------------------------ 
+  Line   include/tabs/history.php                        
+ ------ ------------------------------------------------ 
+  40     Undefined variable: $title                      
+  47     Function db_handler not found.                  
+  47     Undefined variable: $query                      
+  48     Function mysqli_num_rows not found.             
+  55     Undefined variable: $item_id                    
+  65     Function mysqli_fetch_assoc not found.          
+  66     Undefined variable: $timestamp_previouse_entry  
+ ------ ------------------------------------------------ 
+
+ ------ ---------------------------- 
+  Line   include/tabs/advanced.php   
+ ------ ---------------------------- 
+  25     Undefined variable: $class  
+ ------ ---------------------------- 
+
+ ------ ----------------------------------------------- 
+  Line   include/stop_user_modifying_admin_account.php  
+ ------ ----------------------------------------------- 
+  2      Function message not found.                    
+  2      Undefined variable: $info                      
+  3      Function message not found.                    
+  3      Undefined variable: $info                      
+  7      Function mysqli_close not found.               
+  7      Undefined variable: $dbh                       
+ ------ ----------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------- 
+  Line   include/modules/deployment/scp/class.deployment_scp.php                  
+ ------ ------------------------------------------------------------------------- 
+         Class scp was not found while trying to analyse it - autoloading is not  
+         probably configured properly.                                            
+ ------ ------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   include/modules/deployment/rsync/class.deployment_rsync.php            
+ ------ ----------------------------------------------------------------------- 
+         Class rsync was not found while trying to analyse it - autoloading is  
+         not probably configured properly.                                      
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   include/modules/deployment/main.php                                    
+ ------ ----------------------------------------------------------------------- 
+  39     Instantiated class NConf_Deployment not found.                         
+  43     Call to method import_config() on an unknown class NConf_Deployment.   
+  50     Call to method run_deployment() on an unknown class NConf_Deployment.  
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   include/modules/deployment/local/class.deployment_local.php            
+ ------ ----------------------------------------------------------------------- 
+         Class local was not found while trying to analyse it - autoloading is  
+         not probably configured properly.                                      
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   include/modules/deployment/http/class.deployment_http.php             
+ ------ ---------------------------------------------------------------------- 
+         Class http was not found while trying to analyse it - autoloading is  
+         not probably configured properly.                                     
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------- 
+  Line   include/modules/deployment/class.deployment.php                    
+ ------ ------------------------------------------------------------------- 
+         Class NConf_Deployment was not found while trying to analyse it -  
+         autoloading is not probably configured properly.                   
+ ------ ------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------- 
+  Line   include/modules/deployment/class.deployment.modules.php                  
+ ------ ------------------------------------------------------------------------- 
+         Class NConf_Deployment_Modules was not found while trying to analyse it  
+         - autoloading is not probably configured properly.                       
+ ------ ------------------------------------------------------------------------- 
+
+ ------ -------------------------------------- 
+  Line   include/modules.php                   
+ ------ -------------------------------------- 
+  5      Function getDirectoryTree not found.  
+  10     Function message not found.           
+  10     Undefined variable: $debug            
+  12     Function message not found.           
+  12     Undefined variable: $error            
+ ------ -------------------------------------- 
+
+ ------ ----------------------------------------------- 
+  Line   include/menu/static_content/menu_user_end.php  
+ ------ ----------------------------------------------- 
+  9      Function create_menu not found.                
+ ------ ----------------------------------------------- 
+
+ ------ --------------------------------- 
+  Line   include/menu/menu_user.php       
+ ------ --------------------------------- 
+  12     Function create_menu not found.  
+  23     Function create_menu not found.  
+  31     Function db_handler not found.   
+  48     Function create_menu not found.  
+ ------ --------------------------------- 
+
+ ------ ------------------------------ 
+  Line   include/menu/menu_update.php  
+ ------ ------------------------------ 
+  10     Undefined variable: $step     
+  19     Undefined variable: $step     
+ ------ ------------------------------ 
+
+ ------ --------------------------------- 
+  Line   include/menu/menu_admin.php      
+ ------ --------------------------------- 
+  13     Function db_handler not found.   
+  16     Function create_menu not found.  
+ ------ --------------------------------- 
+
+ ------ -------------------------------- 
+  Line   include/login_form.php          
+ ------ -------------------------------- 
+  79     Function message not found.     
+  79     Undefined variable: $info       
+  113    Function js_prepare not found.  
+ ------ -------------------------------- 
+
+ ------ ------------------------------------------------------------------ 
+  Line   include/login_check.php                                           
+ ------ ------------------------------------------------------------------ 
+         Function prepare_password not found while trying to analyse it -  
+         autoloading is not probably configured properly.                  
+ ------ ------------------------------------------------------------------ 
+
+ ------ ---------------------------------------------------------- 
+  Line   include/items_write2db.php                                
+ ------ ---------------------------------------------------------- 
+  8      Function db_templates not found.                          
+  12     Undefined variable: $handle_action                        
+  18     Function db_templates not found.                          
+  52     Undefined variable: $handle_action                        
+  63     Function history_add not found.                           
+  63     Undefined variable: $id                                   
+  72     Function message not found.                               
+  72     Undefined variable: $info                                 
+  75     Undefined variable: $handle_action                        
+  75     Undefined variable: $name                                 
+  76     Function message not found.                               
+  76     Undefined variable: $debug                                
+  86     Function message not found.                               
+  86     Undefined variable: $debug                                
+  94     Function check_link_as_child_or_bidirectional not found.  
+  94     Undefined variable: $class_id                             
+  97     Undefined variable: $handle_action                        
+  105    Undefined variable: $id                                   
+  106    Function db_handler not found.                            
+  110    Undefined variable: $id                                   
+  111    Function db_handler not found.                            
+  118    Function message not found.                               
+  118    Undefined variable: $debug                                
+  129    Undefined variable: $handle_action                        
+  139    Undefined variable: $handle_action                        
+  139    Undefined variable: $name                                 
+  153    Undefined variable: $id                                   
+  155    Undefined variable: $id                                   
+  167    Function db_handler not found.                            
+  174    Undefined variable: $handle_action                        
+  186    Function db_handler not found.                            
+  189    Function history_add not found.                           
+  189    Undefined variable: $id                                   
+  190    Undefined variable: $handle_action                        
+  190    Undefined variable: $name                                 
+  193    Function message not found.                               
+  193    Undefined variable: $error                                
+  194    Undefined variable: $handle_action                        
+  194    Undefined variable: $name                                 
+  201    Undefined variable: $handle_action                        
+  201    Undefined variable: $name                                 
+  204    Undefined variable: $handle_action                        
+  204    Undefined variable: $name                                 
+  222    Undefined variable: $id                                   
+  224    Function db_handler not found.                            
+  226    Function db_templates not found.                          
+  234    Function message not found.                               
+  234    Undefined variable: $info                                 
+  238    Function message not found.                               
+  238    Undefined variable: $info                                 
+  241    Function encrypt_password not found.                      
+  245    Function escape_string not found.                         
+  249    Undefined variable: $handle_action                        
+  251    Undefined variable: $id_naming_attr                       
+  251    Undefined variable: $config_class                         
+  255    Function db_templates not found.                          
+  255    Undefined variable: $id                                   
+  256    Function db_templates not found.                          
+  284    Undefined variable: $id                                   
+  289    Function db_handler not found.                            
+  291    Function message not found.                               
+  291    Undefined variable: $debug                                
+  292    Undefined variable: $handle_action                        
+  292    Undefined variable: $name                                 
+  293    Function history_add not found.                           
+  293    Undefined variable: $id                                   
+  296    Function message not found.                               
+  296    Undefined variable: $error                                
+  297    Undefined variable: $handle_action                        
+  297    Undefined variable: $name                                 
+  302    Undefined variable: $handle_action                        
+  302    Undefined variable: $name                                 
+ ------ ---------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------ 
+  Line   include/includeAllClasses.php                                           
+ ------ ------------------------------------------------------------------------ 
+         Function __autoload not found while trying to analyse it - autoloading  
+         is not probably configured properly.                                    
+ ------ ------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------- 
+  Line   include/head.php                                                         
+ ------ ------------------------------------------------------------------------- 
+  30     Call to function header() with incorrect case: Header                    
+  31     Call to function header() with incorrect case: Header                    
+  66     Call to function header() with incorrect case: Header                    
+  67     Call to function header() with incorrect case: Header                    
+  74     Function message not found.                                              
+  74     Undefined variable: $debug                                               
+  75     Function message not found.                                              
+  75     Undefined variable: $debug                                               
+  81     Instantiated class NConf_PERMISSIONS not found.                          
+  134    Function js_prepare not found.                                           
+  193    Function message not found.                                              
+  193    Undefined variable: $critical                                            
+  208    Function message not found.                                              
+  208    Undefined variable: $critical                                            
+  220    Function db_handler not found.                                           
+  222    Function db_handler not found.                                           
+  224    Function message not found.                                              
+  224    Undefined variable: $critical                                            
+  257    Function message not found.                                              
+  257    Undefined variable: $critical                                            
+  276    Function message not found.                                              
+  276    Undefined variable: $critical                                            
+  296    Call to method checkPageAccess() on an unknown class NConf_PERMISSIONS.  
+  296    Call to method checkIdAuthorization() on an unknown class                
+         NConf_PERMISSIONS.                                                       
+  306    Function message not found.                                              
+  306    Undefined variable: $info                                                
+  312    Function message not found.                                              
+  312    Undefined variable: $debug                                               
+  315    Access to property $message on an unknown class NConf_PERMISSIONS.       
+ ------ ------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------ 
+  Line   include/functions.php                                                   
+ ------ ------------------------------------------------------------------------ 
+         Function message not found while trying to analyse it - autoloading is  
+         not probably configured properly.                                       
+ ------ ------------------------------------------------------------------------ 
+
+ ------ -------------------------------------------------------------------- 
+  Line   include/classes/class.NConf_PERMISSIONS.php                         
+ ------ -------------------------------------------------------------------- 
+         Class NConf_PERMISSIONS was not found while trying to analyse it -  
+         autoloading is not probably configured properly.                    
+ ------ -------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------- 
+  Line   include/classes/class.NConf_HTML.php                                     
+ ------ ------------------------------------------------------------------------- 
+         Class NConf_HTML was not found while trying to analyse it - autoloading  
+         is not probably configured properly.                                     
+ ------ ------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------- 
+  Line   include/classes/class.NConf_DEBUG.php                         
+ ------ -------------------------------------------------------------- 
+         Class NConf_DEBUG was not found while trying to analyse it -  
+         autoloading is not probably configured properly.              
+ ------ -------------------------------------------------------------- 
+
+ ------ ------------------------------- 
+  Line   include/check_vars.php         
+ ------ ------------------------------- 
+  18     Function check_var not found.  
+  19     Function check_var not found.  
+  20     Function check_var not found.  
+  21     Function check_var not found.  
+ ------ ------------------------------- 
+
+ ------ -------------------------------- 
+  Line   include/check_files.php         
+ ------ -------------------------------- 
+  30     Function check_file not found.  
+  31     Function check_file not found.  
+  32     Function check_file not found.  
+  33     Function check_file not found.  
+  34     Function check_file not found.  
+  35     Function check_file not found.  
+ ------ -------------------------------- 
+
+ ------ ---------------------------------- 
+  Line   include/ajax/service_list.php     
+ ------ ---------------------------------- 
+  33     Undefined variable: $list_title   
+  72     Function db_templates not found.  
+  91     Function db_handler not found.    
+  165    Function mysqli_close not found.  
+  165    Undefined variable: $dbh          
+ ------ ---------------------------------- 
+
+ ------ ------------------------------------------- 
+  Line   include/ajax/service_clone.php             
+ ------ ------------------------------------------- 
+  8      Function check_mandatory not found.        
+  18     Function db_templates not found.           
+  37     Function db_templates not found.           
+  42     Function db_templates not found.           
+  47     Undefined variable: $write2db              
+  50     Function db_templates not found.           
+  54     Undefined variable: $destination_host_ids  
+  57     Function db_handler not found.             
+  62     Function db_handler not found.             
+  64     Function message not found.                
+  64     Undefined variable: $debug                 
+  66     Function message not found.                
+  66     Undefined variable: $error                 
+  74     Function db_templates not found.           
+  79     Undefined variable: $basic_service_name    
+  95     Function db_templates not found.           
+  105    Function db_handler not found.             
+  108    Function history_add not found.            
+  110    Function history_add not found.            
+  112    Function history_add not found.            
+  127    Function db_handler not found.             
+  136    Function db_handler not found.             
+  138    Function history_add not found.            
+  146    Undefined variable: $source_host_id        
+  149    Function db_handler not found.             
+  154    Undefined variable: $source_host_id        
+  156    Function db_handler not found.             
+  158    Function history_add not found.            
+  177    Function db_handler not found.             
+  182    Function db_handler not found.             
+  184    Function history_add not found.            
+  193    Function db_templates not found.           
+  206    Undefined variable: $new_service_id        
+  214    Function db_templates not found.           
+  222    Undefined variable: $feedback              
+  223    Undefined variable: $feedback              
+  224    Undefined variable: $feedback              
+ ------ ------------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   include/ajax/service_add.php            
+ ------ ---------------------------------------- 
+  35     Function db_handler not found.          
+  48     Function db_handler not found.          
+  69     Function db_handler not found.          
+  73     Function mysqli_insert_id not found.    
+  73     Undefined variable: $dbh                
+  83     Function db_handler not found.          
+  88     Function read_attributes not found.     
+  97     Function db_templates not found.        
+  101    Function db_templates not found.        
+  117    Function db_templates not found.        
+  129    Function db_handler not found.          
+  132    Function history_add not found.         
+  134    Function history_add not found.         
+  136    Function history_add not found.         
+  144    Function db_templates not found.        
+  160    Function db_handler not found.          
+  162    Function db_templates not found.        
+  169    Function db_templates not found.        
+  179    Function db_handler not found.          
+  180    Function history_add not found.         
+  195    Function db_handler not found.          
+  197    Function mysqli_num_rows not found.     
+  198    Function mysqli_fetch_assoc not found.  
+  200    Function db_templates not found.        
+  212    Function db_handler not found.          
+  214    Function history_add not found.         
+  221    Function message not found.             
+  221    Undefined variable: $debug              
+  235    Function db_handler not found.          
+  237    Function mysqli_num_rows not found.     
+  238    Function mysqli_fetch_row not found.    
+  240    Function db_templates not found.        
+  252    Function db_handler not found.          
+  254    Function history_add not found.         
+  260    Function message not found.             
+  260    Undefined variable: $debug              
+  268    Function add_attribute not found.       
+  274    Function read_attributes not found.     
+  279    Function add_attribute not found.       
+ ------ ---------------------------------------- 
+
+ ------ ----------------------------------------------------------------- 
+  Line   include/ajax/json/history.php                                    
+ ------ ----------------------------------------------------------------- 
+         Function fnColumnToField not found while trying to analyse it -  
+         autoloading is not probably configured properly.                 
+ ------ ----------------------------------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   include/ajax/info.php                   
+ ------ ---------------------------------------- 
+  30     Function db_handler not found.          
+  32     Function mysqli_fetch_assoc not found.  
+  36     Function show_password not found.       
+  65     Function db_templates not found.        
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------------------------------- 
+  Line   include/ajax/exec_generate_config.php                                    
+ ------ ------------------------------------------------------------------------- 
+         Function remove_lock not found while trying to analyse it - autoloading  
+         is not probably configured properly.                                     
+ ------ ------------------------------------------------------------------------- 
+
+ ------ ----------------------------------- 
+  Line   include/ajax/advanced_service.php  
+ ------ ----------------------------------- 
+  7      Function db_templates not found.   
+  31     Function db_handler not found.     
+  34     Function db_templates not found.   
+  35     Function db_templates not found.   
+ ------ ----------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   include/add_item_write2db.php           
+ ------ ---------------------------------------- 
+  28     Function db_templates not found.        
+  28     Undefined variable: $config_class       
+  31     Undefined variable: $config_class       
+  34     Function db_templates not found.        
+  34     Undefined variable: $config_class       
+  46     Function escape_string not found.       
+  47     Undefined variable: $config_class       
+  47     Undefined variable: $config_class       
+  58     Function escape_string not found.       
+  59     Undefined variable: $config_class       
+  59     Undefined variable: $config_class       
+  70     Function escape_string not found.       
+  75     Function escape_string not found.       
+  78     Function db_handler not found.          
+  81     Function mysqli_num_rows not found.     
+  87     Function mysqli_fetch_assoc not found.  
+  95     Function message not found.             
+  95     Undefined variable: $debug              
+  102    Function db_templates not found.        
+  102    Undefined variable: $config_class       
+  103    Function check_mandatory not found.     
+  107    Undefined variable: $config_class       
+  108    Undefined variable: $config_class       
+  109    Undefined variable: $config_class       
+  112    Function oncall_check not found.        
+  127    Function db_templates not found.        
+  127    Undefined variable: $config_class       
+  136    Function db_handler not found.          
+  138    Function message not found.             
+  138    Undefined variable: $error              
+  142    Undefined variable: $insert             
+  144    Function mysqli_insert_id not found.    
+  144    Undefined variable: $dbh                
+  147    Undefined variable: $config_class       
+  148    Function history_add not found.         
+  148    Undefined variable: $config_class       
+  148    Undefined variable: $host_id            
+  150    Function history_add not found.         
+  150    Undefined variable: $config_class       
+  158    Function add_attribute not found.       
+  165    Function read_attributes not found.     
+  165    Undefined variable: $config_class       
+  170    Function add_attribute not found.       
+  176    Function escape_string not found.       
+  182    Undefined variable: $config_class       
+ ------ ---------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   include/add_item_notvisibles.php        
+ ------ ---------------------------------------- 
+  14     Function db_handler not found.          
+  16     Function mysqli_fetch_assoc not found.  
+  22     Function message not found.             
+  22     Undefined variable: $debug              
+  51     Function db_handler not found.          
+  58     Function message not found.             
+ ------ ---------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   include/access_rules.php                
+ ------ ---------------------------------------- 
+  18     Undefined variable: $NConf_PERMISSIONS  
+  33     Undefined variable: $NConf_PERMISSIONS  
+  77     Undefined variable: $NConf_PERMISSIONS  
+  80     Undefined variable: $NConf_PERMISSIONS  
+  83     Undefined variable: $NConf_PERMISSIONS  
+  88     Function db_handler not found.          
+  91     Undefined variable: $NConf_PERMISSIONS  
+  96     Undefined variable: $NConf_PERMISSIONS  
+  99     Undefined variable: $NConf_PERMISSIONS  
+  100    Undefined variable: $NConf_PERMISSIONS  
+  101    Undefined variable: $NConf_PERMISSIONS  
+  102    Undefined variable: $NConf_PERMISSIONS  
+  105    Undefined variable: $NConf_PERMISSIONS  
+  110    Undefined variable: $NConf_PERMISSIONS  
+  111    Undefined variable: $NConf_PERMISSIONS  
+  112    Undefined variable: $NConf_PERMISSIONS  
+  113    Undefined variable: $NConf_PERMISSIONS  
+  114    Undefined variable: $NConf_PERMISSIONS  
+  118    Undefined variable: $NConf_PERMISSIONS  
+  121    Undefined variable: $NConf_PERMISSIONS  
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------------------------------- 
+  Line   ADD-ONS/incoming_config.php                                              
+ ------ ------------------------------------------------------------------------- 
+         Function file_upload_error_message not found while trying to analyse it  
+         - autoloading is not probably configured properly.                       
+ ------ ------------------------------------------------------------------------- 
+
+ ------ ------------------------------- 
+  Line   config.orig/nconf.php          
+ ------ ------------------------------- 
+  11     Undefined variable: $nconfdir  
+ ------ ------------------------------- 
+
+ [ERROR] Found 347 errors                                                       
