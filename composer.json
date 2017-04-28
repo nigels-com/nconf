@@ -1,0 +1,14 @@
+{
+    "name": "cat5tv/nconf",
+    "type": "project",
+    "require": {},
+    "require-dev": {
+        "phpstan/phpstan": "^0.6.4"
+    },
+    "scripts": {
+        "phpstan": [
+            "phpstan analyse -c phpstan.neon config UPDATE_ static_cfg include output design_templates ADD-ONS config.orig bin INSTALL_ img",
+            "phpstan analyse -c phpstan.neon clone_host.php overview.php generate_config.php clone_host_write2db.php main.php delete_item.php modify_class_write2db.php history.php index.php modify_attr.php modify_item_write2db.php id_wrapper.php handle_item.php dependency.php detail_admin_items.php multimodify_attr_write2db.php modify_attr_write2db.php delete_class.php modify_class.php detail.php add_item_step2.php show_class.php clone_service_write2db.php show_attr.php call_file.php clone_service.php modify_item_service.php delete_attr.php static_file_editor.php"
+        ]
+    }
+}
