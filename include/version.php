@@ -6,7 +6,7 @@ define("VERSION_NUMBER", '1.4');
 define("VERSION_STRING", '<img src="design_templates/nconf_fresh/nconf-logo-16.gif" style="vertical-align:bottom" alt="nconf-logo">
                           <b>NEMS NConf '.VERSION_NUMBER.' (dev)</b>');
 
-define("VERSION_NOT_FINAL_WARNING", 'This version of NConf contains heavy customizations for NEMS on modern architecture. 
+define("VERSION_NOT_FINAL_WARNING", 'This version of NConf contains heavy customizations for <a href="http://baldnerd.com/nems" target="_blank">NEMS</a> on modern architecture. 
                                     <br>This version of the release is not directly supported by the original authors.
 				    <br />To contribute, visit <a href="https://github.com/Cat5TV/nconf" target="_blank">https://github.com/Cat5TV/nconf</a>');
 
