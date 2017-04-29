@@ -60,6 +60,7 @@ function message($LEVEL, $text, $mode = "standard"){
 
 
 function escape_string($string){
+    global $dbh;
     # Strip slashes if magic_quotes_gpc is ON (DEPRECATED as of PHP 5.3.0 and REMOVED as of PHP 6.0.0.)
     # Reverse magic_quotes_gpc/magic_quotes_sybase effects on those vars if ON.
     if (get_magic_quotes_gpc() ){
