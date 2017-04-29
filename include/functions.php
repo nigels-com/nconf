@@ -1042,47 +1042,47 @@ function db_handler($query, $output = "result", $debug_title = "query"){
                         $return = "yes";
                     }
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::swap_content($return, 'Result: affected rows: '.$affected.')', FALSE, TRUE);
+                    //$debug_data_result  = NConf_HTML::swap_content($return, 'Result: affected rows: '.$affected.')', FALSE, TRUE);
 
                     break;
                 case "getOne":
                     $first_row = mysqli_fetch_row($result);
                     $return = $first_row[0];
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::text('<b>Result: getOne:</b>'.$return);
+                    //$debug_data_result  = NConf_HTML::text('<b>Result: getOne:</b>'.$return);
                     break;
                 
                 case "result":
                     $return = $result;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::text('<b>Result:</b>'.$return);
+                    //$debug_data_result  = NConf_HTML::text('<b>Result:</b>'.$return);
                     break;
                 
                 case "query":
                     $return = $query;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::text('<b>Result: see query above</b>');
+                    //$debug_data_result  = NConf_HTML::text('<b>Result: see query above</b>');
                     break;
                 
                 case "insert_id":
                     $new_id = mysqli_insert_id($dbh);
                     $return = $new_id;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::text('<b>Result: last query generated ID:</b>'.$return);
+                    //$debug_data_result  = NConf_HTML::text('<b>Result: last query generated ID:</b>'.$return);
                     break;
 
                 case "num_rows":
                     $result = mysqli_num_rows($result);
                     $return = $result;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::text('<b>Result: number of rows:</b>'.$return);
+                    //$debug_data_result  = NConf_HTML::text('<b>Result: number of rows:</b>'.$return);
                     break;
             
                 case "assoc":
                     $result = mysqli_fetch_assoc($result);
                     $return = $result;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::swap_content($return, 'Result: assoc array:', FALSE, TRUE);
+                    //$debug_data_result  = NConf_HTML::swap_content($return, 'Result: assoc array:', FALSE, TRUE);
                     break;
             
                 case "array":
@@ -1096,7 +1096,7 @@ function db_handler($query, $output = "result", $debug_title = "query"){
                     $return = $rows;
 
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::swap_content($return, 'Result array (rows: '.$count.')', FALSE, TRUE);
+                    //$debug_data_result  = NConf_HTML::swap_content($return, 'Result array (rows: '.$count.')', FALSE, TRUE);
                     break;
 
                 case "array_direct":
@@ -1109,7 +1109,7 @@ function db_handler($query, $output = "result", $debug_title = "query"){
                     $count = count($rows);
                     $return = $rows;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::swap_content($return, 'Result array_direct (rows: '.$count.')', FALSE, TRUE);
+                    //$debug_data_result  = NConf_HTML::swap_content($return, 'Result array_direct (rows: '.$count.')', FALSE, TRUE);
                     break;
 
                 case "array_2fieldsTOassoc":
@@ -1120,7 +1120,7 @@ function db_handler($query, $output = "result", $debug_title = "query"){
                     $count = count($rows);
                     $return = $rows;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::swap_content($return, 'Result array_2fieldsTOassoc (rows: '.$count.')', FALSE, TRUE);
+                    //$debug_data_result  = NConf_HTML::swap_content($return, 'Result array_2fieldsTOassoc (rows: '.$count.')', FALSE, TRUE);
                     break;
                 # Failed on output case
                 default:
