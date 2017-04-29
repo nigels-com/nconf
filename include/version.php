@@ -2,11 +2,11 @@
 #
 # File for Version number and info
 #
-define("VERSION_NUMBER", '1.3.1');
+define("VERSION_NUMBER", '1.4');
 define("VERSION_STRING", '<img src="design_templates/nconf_fresh/nconf-logo-16.gif" style="vertical-align:bottom" alt="nconf-logo">
-                          <b>NConf '.VERSION_NUMBER.' (dev)</b>');
+                          <b>NEMS NConf '.VERSION_NUMBER.' (dev)</b>');
 
-define("VERSION_NOT_FINAL_WARNING", 'This is a pre-release version of NConf 1.3.1 with heavy customizations for NEMS. 
+define("VERSION_NOT_FINAL_WARNING", 'This version of NConf contains heavy customizations for NEMS on modern architecture. 
                                     <br>This version of the release is not directly supported by the original authors.
 				    <br />To contribute, visit <a href="https://github.com/Cat5TV/nconf" target="_blank">https://github.com/Cat5TV/nconf</a>');
 
