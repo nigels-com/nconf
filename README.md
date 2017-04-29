@@ -9,6 +9,9 @@ http://baldnerd.com/nems/
 
 **THIS VERSION HAS BEEN RE-WORKED BY ROBBIE FERGUSON TO OPERATE UNDER PHP 7.0+ / mySQLi**
 
+
+
+
 Start guide:
 http://www.nconf.org/dokuwiki/doku.php?id=nconf:help:documentation:start:main
 
@@ -28,7 +31,7 @@ A. Requirements
 NConf system requirements:
 
     * Apache webserver
-    * PHP 5 or higher, php-mysql, php-ldap (only if using LDAP auth)
+    * PHP 7 or higher, php-mysql, php-ldap (only if using LDAP auth)
     * MySQL 5.0.2 or higher (with InnoDB)
     * Perl 5.6 or higher, perl-DBI, perl-DBD-MySQL
     * Nagios 3.x or Icinga 0.8x (binary necessary for testing generated config)
