@@ -1033,7 +1033,7 @@ function db_handler($query, $output = "result", $debug_title = "query"){
                 case "insert":
                 case "update":
                 case "delete":
-                    $affected = mysqli_affected_rows();
+                    $affected = mysqli_affected_rows($dbh);
                     if ( $affected > 0 ){
                         //message('DEBUG', "# affected rows: $affected", "ok");
                         $return = $affected;
