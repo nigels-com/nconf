@@ -60,6 +60,7 @@ function message($LEVEL, $text, $mode = "standard"){
 
 
 function escape_string($string){
+    global $dbh;
     # Strip slashes if magic_quotes_gpc is ON (DEPRECATED as of PHP 5.3.0 and REMOVED as of PHP 6.0.0.)
     # Reverse magic_quotes_gpc/magic_quotes_sybase effects on those vars if ON.
     if (get_magic_quotes_gpc() ){
@@ -68,7 +69,7 @@ function escape_string($string){
     }
     
     # Make a safe string
-    $escaped_string = mysql_real_escape_string($string);
+    $escaped_string = mysqli_real_escape_string($dbh,$string);
     return $escaped_string;
 }
 
@@ -336,8 +337,8 @@ function history_add($action, $name, $value, $fk_id_item = 'NULL', $feature = ''
 # reloads the db connection and selects the db
 # (must be user after auth by sql)
 function relaod_nconf_db_connection(){
-    $dbh = mysql_connect(DBHOST,DBUSER,DBPASS);
-    mysql_select_db(DBNAME);
+    $dbh = mysqli_connect(DBHOST,DBUSER,DBPASS);
+    mysqli_select_db($dbhDBNAME);
 }
 
 
@@ -987,12 +988,12 @@ function get_linked_data($id){
     $old_linked_data = array();
 
     $result_old_linked_data = db_templates("get_linked_data", $id);
-    while($entry2 = mysql_fetch_assoc($result_old_linked_data)){
+    while($entry2 = mysqli_fetch_assoc($result_old_linked_data)){
         $old_linked_data[$entry2["id_attr"]][] = $entry2["fk_item_linked2"];
     }
 
     $result_old_linked_data_childs = db_templates("get_linked_data_childs", $id);
-    while($entry3 = mysql_fetch_assoc($result_old_linked_data_childs)){
+    while($entry3 = mysqli_fetch_assoc($result_old_linked_data_childs)){
         $old_linked_data[$entry3["id_attr"]][] = $entry3["fk_id_item"];
     }
 
@@ -1006,6 +1007,7 @@ function get_linked_data($id){
 # NEW DB HANDLER
 ###
 function db_handler($query, $output = "result", $debug_title = "query"){
+    global $dbh;
 
     # Remove beginning spaces
     $query = trim($query);
@@ -1013,7 +1015,7 @@ function db_handler($query, $output = "result", $debug_title = "query"){
     if ( (DB_NO_WRITES == 1) AND ( !preg_match("/^SELECT/i", $query) ) ){
         message ('INFO', "DB_NO_WRITES activated, no deletions or modifications will be performed");
     }else{
-        $result = mysql_query($query);
+        $result = mysqli_query($dbh,$query);
         // new DEBUG output
         $debug_query        = NConf_HTML::text_converter("sql_uppercase", $query);
         $debug_query_output = NConf_HTML::swap_content($debug_query, 'Query', FALSE, FALSE);
@@ -1031,7 +1033,7 @@ function db_handler($query, $output = "result", $debug_title = "query"){
                 case "insert":
                 case "update":
                 case "delete":
-                    $affected = mysql_affected_rows();
+                    $affected = mysqli_affected_rows($dbh);
                     if ( $affected > 0 ){
                         //message('DEBUG', "# affected rows: $affected", "ok");
                         $return = $affected;
@@ -1041,53 +1043,53 @@ function db_handler($query, $output = "result", $debug_title = "query"){
                         $return = "yes";
                     }
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::swap_content($return, 'Result: affected rows: '.$affected.')', FALSE, TRUE);
+                    //$debug_data_result  = NConf_HTML::swap_content($return, 'Result: affected rows: '.$affected.')', FALSE, TRUE);
 
                     break;
                 case "getOne":
-                    $first_row = mysql_fetch_row($result);
+                    $first_row = mysqli_fetch_row($result);
                     $return = $first_row[0];
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::text('<b>Result: getOne:</b>'.$return);
+                    //$debug_data_result  = NConf_HTML::text('<b>Result: getOne:</b>'.$return);
                     break;
                 
                 case "result":
                     $return = $result;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::text('<b>Result:</b>'.$return);
+                    //$debug_data_result  = NConf_HTML::text('<b>Result:</b>'.$return);
                     break;
                 
                 case "query":
                     $return = $query;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::text('<b>Result: see query above</b>');
+                    //$debug_data_result  = NConf_HTML::text('<b>Result: see query above</b>');
                     break;
                 
                 case "insert_id":
-                    $new_id = mysql_insert_id();
+                    $new_id = mysqli_insert_id($dbh);
                     $return = $new_id;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::text('<b>Result: last query generated ID:</b>'.$return);
+                    //$debug_data_result  = NConf_HTML::text('<b>Result: last query generated ID:</b>'.$return);
                     break;
 
                 case "num_rows":
-                    $result = mysql_num_rows($result);
+                    $result = mysqli_num_rows($result);
                     $return = $result;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::text('<b>Result: number of rows:</b>'.$return);
+                    //$debug_data_result  = NConf_HTML::text('<b>Result: number of rows:</b>'.$return);
                     break;
             
                 case "assoc":
-                    $result = mysql_fetch_assoc($result);
+                    $result = mysqli_fetch_assoc($result);
                     $return = $result;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::swap_content($return, 'Result: assoc array:', FALSE, TRUE);
+                    //$debug_data_result  = NConf_HTML::swap_content($return, 'Result: assoc array:', FALSE, TRUE);
                     break;
             
                 case "array":
                     $i = 0;
                     $rows = array();
-                    while ($row  = mysql_fetch_assoc($result) ){
+                    while ($row  = mysqli_fetch_assoc($result) ){
                         $rows[$i] = $row;
                         $i++;
                     }
@@ -1095,31 +1097,31 @@ function db_handler($query, $output = "result", $debug_title = "query"){
                     $return = $rows;
 
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::swap_content($return, 'Result array (rows: '.$count.')', FALSE, TRUE);
+                    //$debug_data_result  = NConf_HTML::swap_content($return, 'Result array (rows: '.$count.')', FALSE, TRUE);
                     break;
 
                 case "array_direct":
                     $i = 0;
                     $rows = array();
-                    while ($row  = mysql_fetch_row($result) ){
+                    while ($row  = mysqli_fetch_row($result) ){
                         $rows[$i] = $row[0];
                         $i++;
                     }
                     $count = count($rows);
                     $return = $rows;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::swap_content($return, 'Result array_direct (rows: '.$count.')', FALSE, TRUE);
+                    //$debug_data_result  = NConf_HTML::swap_content($return, 'Result array_direct (rows: '.$count.')', FALSE, TRUE);
                     break;
 
                 case "array_2fieldsTOassoc":
                     $rows = array();
-                    while ($row  = mysql_fetch_row($result) ){
+                    while ($row  = mysqli_fetch_row($result) ){
                         $rows[$row[0]] = $row[1];
                     }
                     $count = count($rows);
                     $return = $rows;
                     # DEBUG output with new API module:
-                    $debug_data_result  = NConf_HTML::swap_content($return, 'Result array_2fieldsTOassoc (rows: '.$count.')', FALSE, TRUE);
+                    //$debug_data_result  = NConf_HTML::swap_content($return, 'Result array_2fieldsTOassoc (rows: '.$count.')', FALSE, TRUE);
                     break;
                 # Failed on output case
                 default:
@@ -1136,7 +1138,7 @@ function db_handler($query, $output = "result", $debug_title = "query"){
 
         }else{
             // makes an open debug entry with mysql_error info
-            $debug_entry = NConf_HTML::swap_content($debug_query_output.'<br><b>mysql error:</b>'.mysql_error(), '<b class="attention" >SQL</b> '.$debug_title, TRUE, FALSE, 'debbug_query color_warning');
+            $debug_entry = NConf_HTML::swap_content($debug_query_output.'<br><b>mysql error:</b>'.mysqli_error($dbh), '<b class="attention" >SQL</b> '.$debug_title, TRUE, FALSE, 'debbug_query color_warning');
             NConf_DEBUG::set($debug_entry, 'DEBUG');
         }
 
@@ -1322,7 +1324,7 @@ function read_attributes($config_class, $visible = ''){
     }
     $result = db_handler($query, "result", $message);
     
-    while($entry = mysql_fetch_assoc($result)){
+    while($entry = mysqli_fetch_assoc($result)){
 
         if( ($entry["datatype"] == "text") OR ($entry["datatype"] == "select") ){
             // set value
@@ -1888,7 +1890,7 @@ function get_childs($id, $mode, $levels = 0){
     $result = db_handler($query, 'result', "get childs from $id");
 
 
-    while($entry = mysql_fetch_assoc($result)){
+    while($entry = mysqli_fetch_assoc($result)){
         /*
         #special for services
         if($entry["config_class"] == "service"){
@@ -2141,7 +2143,7 @@ function get_parents($id, &$flat = array(), $levels = 0){
             ORDER BY ConfigAttrs.friendly_name DESC,attr_value';
 
     $result = db_handler($sql, "result", "Recursive get parents");
-    while($entry = mysql_fetch_assoc($result)){
+    while($entry = mysqli_fetch_assoc($result)){
 
         #special for services
         /*

@@ -516,6 +516,6 @@ echo '</div>';
 
 <?php
 
-mysql_close($dbh);
+mysqli_close($dbh);
 require_once 'include/foot.php';
 ?>

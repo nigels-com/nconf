@@ -121,9 +121,9 @@ class NConf_Deployment{
     // update history log
     final public function history($message, $status){
         if($status === TRUE){
-            history_add('module', 'deploy '.$this->name, $message.' (OK)'); 
+//            history_add('module', 'deploy '.$this->name, $message.' (OK)'); 
         }else{
-            history_add('module', 'deploy '.$this->name, $message.' (FAILED)');
+//            history_add('module', 'deploy '.$this->name, $message.' (FAILED)');
         }
     }
 

@@ -45,7 +45,7 @@ if ( !empty($item_id) ){
     echo '<table class="ui-nconf-table ui-nconf-max-width">';
 
     $result = db_handler($query, 'result', "get history entries");
-    if (mysql_num_rows($result) == 0){
+    if (mysqli_num_rows($result) == 0){
         echo '<tr class="box_content"><td colspan=3>no history data found</td></tr>';
     }else{
         echo '<tr class="box_content">
@@ -62,7 +62,7 @@ if ( !empty($item_id) ){
                   <td class="ui-state-default" style="border-right: 0px;">Object</td>';
         echo '</tr>';
         $count = 1;
-        while($entry = mysql_fetch_assoc($result)){
+        while($entry = mysqli_fetch_assoc($result)){
             if ( !empty($timestamp_previouse_entry) AND $timestamp_previouse_entry > $entry["timestamp"]) {
                 $timestamp = $entry["timestamp"];
             }elseif( !empty($timestamp_previouse_entry) ){
