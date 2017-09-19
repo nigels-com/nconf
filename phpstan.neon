@@ -1,8 +1,0 @@
-includes:
-    - vendor/phpstan/phpstan/conf/config.level5.neon
-
-parameters:
-    reportUnmatchedIgnoredErrors: false
-    checkFunctionArgumentTypes: true
-    enableUnionTypes: true
-
