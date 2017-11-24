@@ -5,7 +5,7 @@ NConf homepage:
 http://www.nconf.org/
 
 NEMS homepage:
-http://baldnerd.com/nems/
+https://nemslinux.com/
 
 **THIS VERSION HAS BEEN RE-WORKED BY ROBBIE FERGUSON TO OPERATE UNDER PHP 7.0+ / mySQLi**
 
