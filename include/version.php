@@ -12,7 +12,7 @@ define("VERSION_NOT_FINAL_WARNING", 'This version of NConf contains heavy custom
 
 define("COPYRIGHT_STRING", '<i>Copyright &copy; 2006 - 2012 <br>Sunrise Communications AG, Zurich, Switzerland</i>
                           <br><br>Project homepage: <a href="http://www.nconf.org/" target="_blank">www.nconf.org</a>
-			  <br /><br />Adapted for NEMS by <a href="http://baldnerd.com" target="_blank">Robbie Ferguson</a>');
+			  <br /><br />Adapted for <a href="https://nemslinux.com" target="_blank">Nagios Enterprise Monitoring Server</a> by <a href="http://baldnerd.com" target="_blank">Robbie Ferguson</a>');
 
 define("DISCLAIMER_STRING", '<b>Developed by:</b>
                           <br>Fabian Gander, Angelo Gargiulo, Bernhard Waldvogel, Robbie Ferguson;
