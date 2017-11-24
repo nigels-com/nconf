@@ -1,6 +1,8 @@
 NConf README
 ============
 
+**NConf is not dead.** It's just no longer developed by the original developer(s). Here is the most current NConf build, maintained by Robbie Ferguson for NEMS Linux.
+
 NConf homepage:
 http://www.nconf.org/
 
