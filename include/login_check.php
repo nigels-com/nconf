@@ -10,6 +10,10 @@
 #   - $_SESSION['username'] for "welcome username, and history entries"
 
 NConf_DEBUG::open_group("Authentication");
+#
+#print_r(AUTH_TYPE);
+#die();
+
 # authentication type
 message($debug, "Authentication type: ".AUTH_TYPE);
 message($debug, "Encryption type: ".PASSWD_ENC);
@@ -278,10 +282,12 @@ if (AUTH_TYPE == "file"){
 }elseif (AUTH_TYPE == "ad_ldap") {
     $ldapconnection = ldap_connect(AD_LDAP_SERVER, AD_LDAP_PORT);
     NConf_DEBUG::set(AD_LDAP_SERVER, 'DEBUG', 'AD LDAP SERVER');
+    ldap_set_option($ldapconnection, LDAP_OPT_REFERRALS, 0);
     ldap_set_option($ldapconnection, LDAP_OPT_PROTOCOL_VERSION, 3);
 
     # Try to logon user to ldap
-    $ldap_user_dn = str_replace(USER_REPLACEMENT,$user_loginname,AD_BASE_DN);
+    $ldap_user_dn = str_replace(USER_REPLACEMENT, $user_loginname, AD_BASE_DN);
+
     NConf_DEBUG::set($ldap_user_dn, 'DEBUG', 'ldap user dn');
 
     $user_pwd = $_POST["password"];

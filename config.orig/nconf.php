@@ -38,7 +38,7 @@ define('TEMPLATE_DIR', "nconf_fresh");
 # Debug
 #
 define("DEBUG_MODE",     0); # [0|1]
-define("DEBUG_GENERATE", 3); # [1=ERROR|2=WARN|3=INFO|4=DEBUG|5=TRACE]
+define("DEBUG_GENERATE", 2); # [1=ERROR|2=WARN|3=INFO|4=DEBUG|5=TRACE]
 define("DB_NO_WRITES",   0); # [0|1] Experimental, use with CAUTION!
 
 #
