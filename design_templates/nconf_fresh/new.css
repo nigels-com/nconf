@@ -31,10 +31,11 @@ text-align:left;
 }
 
 #logo {
-background-image:url(/nconf/img/nconf_logo.png);
+background-image:url(/nconf/img/nconf_logo_sm.png);
 background-repeat:no-repeat;
-height:97px;
-width:986px;
+background-position: left center;
+height:97px; /* these are the size of the wrapper */
+width:986px; /* not the image */
 }
 
 #titlesub {
