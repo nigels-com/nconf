@@ -1005,7 +1005,22 @@ $fattr,$fval
                         }
                         undef $attr->[1];
                     }
-                }
+
+                    # handle advanced service escalations
+                    if($class eq "adv-service-escalation"){
+                        if($attr->[0] eq "service_description"){
+                             my @temporaer = &getItemData($attr->[3]);
+                             foreach my $tempo (@temporaer){
+                                  if($tempo->[0] eq "service_description"){
+                                         &logger(4,"Replacing Advanced Service NConf internal service name");
+                                         &logger(4,"Before: '$attr->[1]' replace with '$tempo->[1]'");
+                                         $attr->[1] = $tempo->[1];
+                                         &logger(4,"After: '$attr->[1]'");
+                                  }
+                             }
+                        }
+                    }
+               }
 
                 # apply certain class specific exceptions
                 # caution: this function must always be called before makeValuesDistinct() AND after checking for collector specific items
