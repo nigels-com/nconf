@@ -988,6 +988,8 @@ $fattr,$fval
 
                 # this routine makes sense both for collectors and monitors, since hosts/services can also be disabled (not monitored) on a monitor,
                 # and must therefore be removed from any items they might be linked to;
+		
+		my $temp_hostname = "";
 
                 foreach my $attr (@item_links){
 
