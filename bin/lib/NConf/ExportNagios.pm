@@ -1006,6 +1006,24 @@ $fattr,$fval
                         undef $attr->[1];
                     }
 
+                    # handle service escalations - if there is a service escalation defined that is not valid delete it
+                    if($class eq "service-escalation"){
+                        if($attr->[0] eq "host_name"){
+                                $temp_hostname = $attr->[3];
+                        }
+                        if($attr->[0] eq "service_description"){
+                             my @temporaer2 = &getItemsLinked($attr->[3]);
+                                    foreach my $tempo (@temporaer2){
+                                            if($tempo->[0] eq "host_name"){
+                                                    if($tempo->[3] ne $temp_hostname){
+                                                            &logger(4,"Service escalation for non-matching service '$attr->[3]' on host '$temp_hostname' - removing");
+                                                            undef $attr->[1];
+                                                    }
+                                            }
+                                    }
+                        }
+                    }
+
                     # handle advanced service escalations
                     if($class eq "adv-service-escalation"){
                         if($attr->[0] eq "service_description"){
