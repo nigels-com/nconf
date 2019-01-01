@@ -70,6 +70,7 @@ if($opt_i){
 &logger(4,"Build the list of attributes to display");
 my %attr_restrict;
 if($opt_a){
+#    no strict 'refs';
     &logger(5,"Reading attribute(s) selection");
     my @attr_restrict = ();
     if($opt_a eq "VISIBLE") {
