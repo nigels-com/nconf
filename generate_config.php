@@ -17,7 +17,7 @@ if ( $status ){
     # but this will prevent lock file to stay there
     if ( $lock_file_age < 600 ){
         # some one other is generating the config
-        NConf_DEBUG::set('Someone else is already generating the configuration.', 'ERROR');
+        NConf_DEBUG::set('Someone else is already generating the configuration. If you believe this is in error, run: sudo nems-quickfix', 'ERROR');
         
 
         # close page and cancel action
