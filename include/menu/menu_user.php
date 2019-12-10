@@ -4,12 +4,6 @@ echo '
     <div class="ui-widget-content box_content">';
 
         ###
-        # user navigation start
-        $user_menu_begin = array();
-        array_push($user_menu_begin, array("nav_links" => "Show History::history.php", "friendly_name" => "", "grouping" => ""));
-        array_push($user_menu_begin, array("nav_links" => "Show Host parent / child view::dependency.php", "friendly_name" => "", "grouping" => ""));
-        # create output
-        create_menu($user_menu_begin);
 
         $user_menu_begin2 = array();
         # Create oncall link, if $ONCALL_GROUPS is defined
@@ -46,6 +40,13 @@ echo '
 
         # Display  menu
         create_menu($user_menu_end);
+
+        # user navigation start
+        $user_menu_begin = array();
+        array_push($user_menu_begin, array("nav_links" => "Show History::history.php", "friendly_name" => "", "grouping" => ""));
+        array_push($user_menu_begin, array("nav_links" => "Show Host parent / child view::dependency.php", "friendly_name" => "", "grouping" => ""));
+        # create output
+        create_menu($user_menu_begin);
 
 
 echo '</div>';

@@ -168,18 +168,7 @@ $NConf_PERMISSIONS = new NConf_PERMISSIONS;
         <div id="logo"></div>
     </center>
 </div>
-<div id="titlesub">
-    <center>
-        <div>
-            <table>
-                <tr>
-                    <td>Welcome&nbsp;<?php if( isset($_SESSION["userinfos"]['username']) ) echo $_SESSION["userinfos"]['username']; ?></td>
-                    <td><div align="right"><a title="Get help on nconf.org" class="jQ_tooltip" href="http://www.nconf.org/dokuwiki/doku.php?id=nconf:help:main" target="_blank">[ Help ]</a></div></td>
-                </tr>
-            </table>
-        </div>
-    </center>
-</div>
+<div id="titlesub"></div>
 <div id="mainwindow">
     <?php
     if ( isset($_SERVER["REQUEST_URI"]) AND preg_match( '/'.preg_quote('INSTALL.php').'/', $_SERVER['REQUEST_URI']) ){
