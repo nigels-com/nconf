@@ -8,6 +8,9 @@ if (file_exists('config/nconf.php')){
     require_once('main.php');
 }
 
+// Detect if this is NEMS Linux
+if (file_exists('/usr/local/bin/nems-info')) $nemsver = trim(shell_exec('/usr/local/bin/nems-info nemsver')); else $nemsver = 0;
+
 // Clean cache (session)
 if ( isset($_GET["clear"]) ){
     if ( !empty($_GET["class"]) ){
@@ -98,11 +101,6 @@ $NConf_PERMISSIONS = new NConf_PERMISSIONS;
     }
     ?>
 
-    <!-- Load nconf js functions -->
-    <script src="include/js/nconf.js" type="text/javascript"></script>
-    <script src="include/js/ajax.js" type="text/javascript"></script>
-
-    
     <?php
     if ( defined('AUTO_COMPLETE') ){
         echo '
@@ -116,8 +114,9 @@ $NConf_PERMISSIONS = new NConf_PERMISSIONS;
     include_once('design_templates/'.TEMPLATE_DIR.'/jQuery/init.php');
     if ( defined('JQUERY') AND JQUERY == 1 ){
         echo '<!-- Load jQuery -->
-            <script src="include/js/jquery.js" type="text/javascript"></script>
-            <script src="include/js/jquery-ui.custom.min.js" type="text/javascript"></script>
+            <script src="include/js/jquery.min.js" type="text/javascript"></script>
+            <script src="include/js/jquery-migrate.min.js"></script>
+            <script src="include/js/jquery-ui.min.js" type="text/javascript"></script>
             ';
         echo '<!-- Load jQuery plugins (also nconf-jquery plugins/functions -->
             <script src="include/js/jquery_plugins/jquery.nconf_ajax_debug.js" type="text/javascript"></script>
@@ -139,16 +138,21 @@ $NConf_PERMISSIONS = new NConf_PERMISSIONS;
                   });
             ");
         }
+
+
         
 
     }
 
-    
-
+echo '
+    <!-- Load nconf js functions -->
+    <script src="include/js/nconf.js" type="text/javascript"></script>
+    <script src="include/js/ajax.js" type="text/javascript"></script>
+';
 
     /* NConf design by jQuery UI Themes*/
     if ( !defined("JQUERY_THEME") ) define("JQUERY_THEME", "nconf");
-    echo '<link rel="stylesheet" type="text/css" href="design_templates/'.TEMPLATE_DIR.'/jQuery/'.JQUERY_THEME.'/jquery-ui.custom.css">';
+    echo '<link rel="stylesheet" type="text/css" href="design_templates/'.TEMPLATE_DIR.'/jQuery/jquery-ui-1.12.1/jquery-ui.min.css">';
 
     echo '<link rel="stylesheet" type="text/css" href="design_templates/'.TEMPLATE_DIR.'/jQuery/jquery.table.css">';
     echo '<link rel="stylesheet" type="text/css" href="design_templates/'.TEMPLATE_DIR.'/jQuery/nconf-widget.css">';
@@ -162,13 +166,9 @@ $NConf_PERMISSIONS = new NConf_PERMISSIONS;
 
 
 <body>
-    <div id="switcher" style="position: absolute; right: 0"></div>
-<div id="title">
-    <center>
-        <div id="logo"></div>
-    </center>
-</div>
-<div id="titlesub"></div>
+
+<div id="title"><a href="./"><img src="/nconf/img/nconf_logo_sm.png" /></a></div>
+
 <div id="mainwindow">
     <?php
     if ( isset($_SERVER["REQUEST_URI"]) AND preg_match( '/'.preg_quote('INSTALL.php').'/', $_SERVER['REQUEST_URI']) ){
@@ -224,6 +224,7 @@ $NConf_PERMISSIONS = new NConf_PERMISSIONS;
 
                     require_once(NCONFDIR."/include/menu/menu_start.html");
                     require_once(NCONFDIR."/include/menu/menu_user.php");
+                    require_once(NCONFDIR."/include/menu/menu_misc.php");
                     require_once(NCONFDIR."/include/menu/menu_end.php");
                     echo '<div id="maincontent">';
 
@@ -232,6 +233,7 @@ $NConf_PERMISSIONS = new NConf_PERMISSIONS;
                     require_once(NCONFDIR."/include/menu/menu_start.html");
                     require_once(NCONFDIR."/include/menu/menu_user.php");
                     require_once(NCONFDIR."/include/menu/menu_admin.php");
+                    require_once(NCONFDIR."/include/menu/menu_misc.php");
                     require_once(NCONFDIR."/include/menu/menu_end.php");
                     echo '<div id="maincontent">';
 
@@ -317,6 +319,5 @@ $NConf_PERMISSIONS = new NConf_PERMISSIONS;
     # close header-part in DEBUG section
     $debug_entry = NConf_HTML::line().NConf_HTML::text("Page specific debugging:", FALSE, 'b');
     NConf_DEBUG::set($debug_entry);
-
 
 ?>

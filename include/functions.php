@@ -1653,6 +1653,11 @@ function create_menu($result){
     $group_bevore = "";
     $block_i = 0;
     foreach ($result as $nav_class){
+// Hide menus that are for Nagios, but shouldn't be used on NEMS (will only break things)
+if (
+  trim($nav_class['grouping']) != 'Nagios servers'
+) {
+
         if ($nav_class["grouping"] != $group_bevore){
 
             echo '</table>
@@ -1718,6 +1723,7 @@ function create_menu($result){
         
         }
     }
+}
     //END foreach
 
     // Last Block has to be closed :

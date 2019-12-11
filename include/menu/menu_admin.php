@@ -23,5 +23,5 @@
     include('include/menu/static_content/menu_admin_end.html');
 
     // FIX administration menu (attributes and classes)
-    include('include/menu/menu_administration.html');
+//    include('include/menu/menu_administration.html');
     ?>

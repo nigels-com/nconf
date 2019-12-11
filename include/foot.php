@@ -2,6 +2,7 @@
 
     </div> <!-- END OF DIV "maincontent" -->
 </div>     <!-- END OF DIV "mainwindow" -->
+</div> <!-- NEMS Wallpaper, if NEMS LINUX -->
 <!-- empty clear div for space to footer (without that, it will not work correctly when footer has clear:both! -->
 <div class="clearer"></div>
 <div id="footer">
@@ -40,6 +41,14 @@
         &nbsp;
     </div>
 </div> <!-- END OF DIV "footer" -->
+
+<?php
+  if ($nemsver > 0) {
+    echo '<script src="/js/jquery.backstretch.min.js"></script>';
+//    $backgroundElem = 'backstretch';
+    require_once('/var/www/html/inc/wallpaper.php');
+  }
+?>
 
 </body>
 </html>

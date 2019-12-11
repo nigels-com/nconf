@@ -162,7 +162,6 @@
     //$icon_count = 1;
     echo '<div class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons ui-nconf-accordion-list">';
 
-
     ### SYNTAX CHECK
     # now run tests on all generated files
     $details = '';
@@ -210,8 +209,8 @@
                 echo '<br>';
             }
             echo '<br>';
-        echo '</div>';
-        
+        echo '</div><br />';
+        echo $line;
     }
 
 

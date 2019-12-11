@@ -6,7 +6,7 @@ require_once 'include/head.php';
 <script type="text/javascript">
     $(document).ready(function(){
         // show inheritance table when clicking a host
-        $(".accordion_title").live("click hover", function(event) {
+        $(".accordion_title").on("click hover", function(event) {
             $(this).nconf_accordion_list(event);
             return false;
         });
