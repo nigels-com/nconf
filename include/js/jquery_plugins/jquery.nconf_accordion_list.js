@@ -3,6 +3,7 @@
 //
 (function($){
     $.fn.nconf_accordion_list = function(event) {
+alert('hi');
         return $(this).each( function() {
             // accordion style enhanced to handle all items
             if (event.type == 'click'){

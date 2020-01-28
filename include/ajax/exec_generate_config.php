@@ -157,7 +157,7 @@
     system("cd ".NCONFDIR."/temp; gzip NagiosConfig.tar; mv NagiosConfig.tar.gz NagiosConfig.tgz");
 
     echo '<br><br>';
-    echo NConf_HTML::title('Running syntax check:');
+    echo NConf_HTML::title('Checking your config for any issues:');
 
     //$icon_count = 1;
     echo '<div class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons ui-nconf-accordion-list">';
@@ -195,9 +195,10 @@
 
         $total_msg = '<span class="notBold accordion_header_right">'.$total_msg.'</span>';
         // print server info
-        $title = '<span class="ui-icon ui-icon-triangle-1-e"></span><a href="#">'.$server_str.$total_msg.'</a>';
-        echo NConf_HTML::title($title, 3, 'class="accordion_title ui-accordion-header ui-helper-reset ui-state-default ui-corner-top ui-corner-bottom"');
-        echo '<div class="accordion_content ui-widget-content ui-corner-bottom monospace" style="display: none;">';
+//        $title = '<span class="ui-icon ui-icon-triangle-1-e"></span><a href="#">'.$server_str.$total_msg.'</a>';
+//        echo NConf_HTML::title($title, 3, 'class="accordion_title ui-accordion-header ui-helper-reset ui-state-default ui-corner-top ui-corner-bottom"');
+//        echo '<div class="accordion_content ui-widget-content ui-corner-bottom monospace" style="display: none;">';
+        echo '<div class="monospace" style="background:url(img/bg_alpha.png); color: #4AF626; font-size:.8em; padding: 0 8px;">';
             foreach($srv_summary[$server] as $line){
                 if ( preg_match("/^Error:/",$line) ){
                     echo '<span class="red">'.$line.'</span>';
