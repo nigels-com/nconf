@@ -211,7 +211,7 @@
             }
             echo '<br>';
         echo '</div><br />';
-        echo $line;
+//        echo $line;
     }
 
 
@@ -228,7 +228,7 @@
         system("rm -rf ".NCONFDIR."/temp/*");
 
         if(ALLOW_DEPLOYMENT == 1){
-            echo NConf_HTML::title('Deploy generated config:');
+            echo NConf_HTML::title('Looks good! Ready to deploy.');
 
             // check  if new deployment is configured
             $deployment_config = NCONFDIR.'/config/deployment.ini';
@@ -253,7 +253,7 @@
                 // Show deployment button
                 echo "<form method=\"POST\" action=\"call_file.php?module_file=deployment/main.php\" id=buttons>";
                     echo '<input type=hidden name=status value="'.$status.'">';
-                    echo '<br><input type="submit" name="submit" value="Deploy" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">';
+                    echo '<br><input type="submit" name="submit" value="Deploy to Live NEMS Server" id="DeployBTN">';
                 echo "</form><br>";
             }
 

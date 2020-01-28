@@ -261,3 +261,21 @@ input[type=text], input[type=password], select, textarea {
 .monospace{
     font-family: monospace;
 }
+
+#DeployBTN {
+  width: auto !important;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 12px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px #333;
+  background: #84c145;
+}
+
+#DeployBTN:hover {
+  color: #000;
+  background: #a7e568;
+}
+
