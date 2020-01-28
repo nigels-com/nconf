@@ -198,7 +198,7 @@
 //        $title = '<span class="ui-icon ui-icon-triangle-1-e"></span><a href="#">'.$server_str.$total_msg.'</a>';
 //        echo NConf_HTML::title($title, 3, 'class="accordion_title ui-accordion-header ui-helper-reset ui-state-default ui-corner-top ui-corner-bottom"');
 //        echo '<div class="accordion_content ui-widget-content ui-corner-bottom monospace" style="display: none;">';
-        echo '<div class="monospace" style="background:url(img/bg_alpha.png); color: #4AF626; font-size:.8em; padding: 0 8px;">';
+        echo '<div class="monospace" style="background:url(img/bg_alpha.png); color: #4AF626; font-size:.8em; padding: 0 8px; border:1px #555 solid; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;">';
             foreach($srv_summary[$server] as $line){
                 if ( preg_match("/^Error:/",$line) ){
                     echo '<span class="red">'.$line.'</span>';
