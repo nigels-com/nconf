@@ -44,7 +44,7 @@ class NConf_Deployment{
             );
         }elseif (ALLOW_DEPLOYMENT && (!ALLOW_DIRECT_DEPLOYMENT && empty($_POST["status"]) ) ){
             echo NConf_HTML::limit_space(
-                NConf_HTML::show_error('ERROR', 'Please first click "Deploy Config to NEMS".')
+                NConf_HTML::show_error('ERROR', 'Please first click "Generate NEMS Config".')
             );
         }elseif ( (ALLOW_DEPLOYMENT && ALLOW_DIRECT_DEPLOYMENT)
             ||    (ALLOW_DEPLOYMENT

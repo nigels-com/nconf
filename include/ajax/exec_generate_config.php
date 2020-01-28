@@ -1,6 +1,12 @@
 <?php
     require_once 'main.php';
-    
+
+    if (file_exists('/usr/local/bin/nems-info')) {
+      $nemsver = shell_exec('/usr/local/bin/nems-info nemsver');
+    } else {
+      $nemsver = 0;
+    }
+
     # Remove lock file if process fails
     $lock_file = 'temp/generate.lock';
     function remove_lock(){
@@ -120,7 +126,7 @@
 
 
             // print each line
-            foreach ($output AS $line){
+            foreach ($output as $line){
                 // Filter some lines:
                 if ( empty($line)) continue;
                 if ( strpos($line, "Copyright")) continue;
@@ -199,15 +205,28 @@
 //        echo NConf_HTML::title($title, 3, 'class="accordion_title ui-accordion-header ui-helper-reset ui-state-default ui-corner-top ui-corner-bottom"');
 //        echo '<div class="accordion_content ui-widget-content ui-corner-bottom monospace" style="display: none;">';
         echo '<div class="monospace" style="background:url(img/bg_alpha.png); color: #4AF626; font-size:.8em; padding: 0 8px; border:1px #555 solid; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;">';
-            foreach($srv_summary[$server] as $line){
+            $startOutput = 0;
+            foreach($srv_summary[$server] as $key=>$line){
+              if ($startOutput == 1) {
                 if ( preg_match("/^Error:/",$line) ){
                     echo '<span class="red">'.$line.'</span>';
                 }elseif ( preg_match("/^Warning:/",$line) ){
                     echo '<span class="orange">'.$line.'</span>';
+                }elseif ( array_key_last($srv_summary[$server]) == $key) {
+                    // The very last line of the output, but only if not error/warning
+                    echo '<span class="white"><b>'.$line.'</b></span>';
                 }else{
                     echo $line;
                 }
                 echo '<br>';
+              }
+              if (substr($line,0,7) == 'Website') {
+                echo '<br />';
+                if ($nemsver > 0) {
+                  echo '<b>NEMS Linux ' . $nemsver . '</b><br /><br />';
+                }
+                $startOutput = 1;
+              } // begin outputting after the header (which ends with Website:)
             }
             echo '<br>';
         echo '</div><br />';
@@ -253,7 +272,7 @@
                 // Show deployment button
                 echo "<form method=\"POST\" action=\"call_file.php?module_file=deployment/main.php\" id=buttons>";
                     echo '<input type=hidden name=status value="'.$status.'">';
-                    echo '<br><input type="submit" name="submit" value="Deploy to Live NEMS Server" id="DeployBTN">';
+                    echo '<br><input type="submit" name="submit" value="Deploy Config to NEMS Server" id="DeployBTN">';
                 echo "</form><br>";
             }
 

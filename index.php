@@ -16,7 +16,7 @@ if (file_exists('config/nconf.php') ){
       echo '<h2>Welcome to NEMS NConf</h2>';
       echo '<p>This is where you can configure your monitoring. Once you have configured your server, press "';
       if ($nemsver > 0) {
-        echo 'Deploy Config to NEMS';
+        echo 'Generate NEMS Config';
       } else {
         echo 'Generate Nagios Config';
       }

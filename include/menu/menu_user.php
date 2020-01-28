@@ -12,7 +12,7 @@ echo '
         }
 
         # Generate Nagios config link
-//        array_push($user_menu_begin2, array("nav_links" => "Deploy Config to NEMS::generate_config.php", "friendly_name" => "", "grouping" => ""));
+//        array_push($user_menu_begin2, array("nav_links" => "Generate NEMS Config::generate_config.php", "friendly_name" => "", "grouping" => ""));
 
         # create output
         create_menu($user_menu_begin2);
