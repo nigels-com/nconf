@@ -2,7 +2,7 @@
   require_once 'include/head.php';
 ?>
 <b>NEMS Configurator (NConf) Version 1.6</b><br><br>
-<i>Copyright &copy; 2016 - 2019 Robbie Ferguson, Ontario, Canada</i><br />
+<i>Copyright &copy; 2016 - <?= date('Y'); ?> Robbie Ferguson, Ontario, Canada</i><br />
 
 <i>Based on NConf, Copyright &copy; 2006 - 2012 Sunrise Communications AG, Zurich, Switzerland</i>
 <br><br><table >

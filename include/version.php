@@ -10,7 +10,7 @@ define("VERSION_NOT_FINAL_WARNING", 'This version of NConf contains heavy custom
 				    <br />To contribute, visit <a href="https://github.com/Cat5TV/nconf" target="_blank">https://github.com/Cat5TV/nconf</a>');
 
 define("COPYRIGHT_STRING", '
-<i>Copyright &copy; 2016 - 2019 Robbie Ferguson, Ontario, Canada</i><br />
+<i>Copyright &copy; 2016 - ' . date('Y') . ' Robbie Ferguson, Ontario, Canada</i><br />
 
 <i>Based on NConf, Copyright &copy; 2006 - 2012 Sunrise Communications AG, Zurich, Switzerland</i>
 ');
