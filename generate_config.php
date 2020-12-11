@@ -1,6 +1,6 @@
 <?php
 require_once 'include/head.php';
-
+echo '<img src="img/loader.gif" width="200" height="auto" />';
 $lock_file = 'temp/generate.lock';
 $status = check_file('file_exists', $lock_file, TRUE, "File/Directory still exists, please remove it: "); 
 
