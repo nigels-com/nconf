@@ -122,7 +122,7 @@ $NConf_PERMISSIONS = new NConf_PERMISSIONS;
             <script src="include/js/jquery_plugins/jquery.nconf_ajax_debug.js" type="text/javascript"></script>
             <script src="include/js/jquery_plugins/jquery.nconf_help_admin.js" type="text/javascript"></script>
             <script src="include/js/jquery_plugins/jquery.nconf_tooltip.js" type="text/javascript"></script>
-            <script src="include/js/jquery_plugins/jquery.nconf_accordion_list.js" type="text/javascript"></script>
+<!--            <script src="include/js/jquery_plugins/jquery.nconf_accordion_list.js" type="text/javascript"></script>-->
             <script src="include/js/jquery_plugins/jquery.nconf_head.js" type="text/javascript"></script>
             ';
 
