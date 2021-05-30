@@ -15,8 +15,8 @@ Table of contents
 -----------------
 
 * [Requirements](#Requirements)
-* [Manual Installation](#BManual Installation)
-* [Manual Update](#Manual Update)
+* [Manual Installation](#Manual_Installation)
+* [Manual Update](#Manual_Update)
 
 
 ## Requirements
