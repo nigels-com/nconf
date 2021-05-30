@@ -23,18 +23,18 @@ Table of contents
 
 NConf system requirements:
 
-    * Apache webserver
-    * PHP 7 or higher, php-mysql, php-ldap (only if using LDAP auth)
-    * MySQL 5.0.2 or higher (with InnoDB)
-    * Perl 5.6 or higher, perl-DBI, perl-DBD-MySQL
-    * Nagios 3.x or Icinga 0.8x (binary necessary for testing generated config)
+* Apache webserver
+* PHP 7 or higher, php-mysql, php-ldap (only if using LDAP auth)
+* MySQL 5.0.2 or higher (with InnoDB)
+* Perl 5.6 or higher, perl-DBI, perl-DBD-MySQL
+* Nagios 3.x or Icinga 0.8x (binary necessary for testing generated config)
 
 
 php.ini settings:
 
-    * short_open_tag = On
-    * register_globals = Off
-    * magic_quotes_gpc = Off 
+* short_open_tag = On
+* register_globals = Off
+* magic_quotes_gpc = Off 
 
 
 Compatibility:
@@ -55,10 +55,10 @@ Download and unpack the NConf archive to your webserver's document root folder.
 2. Set permissions
 Make sure the following directories are writable for your webserver user: 
 
-   ./config
-   ./output
-   ./static_cfg
-   ./temp
+    ./config
+    ./output
+    ./static_cfg
+    ./temp
 
 
 3. Create the database
@@ -66,10 +66,10 @@ Create a new MySQL database for NConf, create a user to access the database, gra
 
 On the commandline, you would proceed like this: 
 
-   $> mysql -u root -p
-   Enter password:
-   mysql> CREATE DATABASE DBNAME;
-   mysql> GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER ON `DBNAME`.* TO 'DB_USER'@'localhost' IDENTIFIED BY 'DB_PASS';
+    $> mysql -u root -p
+    Enter password:
+    mysql> CREATE DATABASE DBNAME;
+    mysql> GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER ON `DBNAME`.* TO 'DB_USER'@'localhost' IDENTIFIED BY 'DB_PASS';
 
 Please refer to the MySQL manual on how to set up InnoDB (the steps might vary depending on your OS distribution). 
 
@@ -84,15 +84,15 @@ Copy the contents of ./config.orig to ./config. Make sure you also copy the hidd
 
 Edit ./config/mysql.php, set at least the following values: 
 
-   DBHOST 
-   DBNAME 
-   DBUSER 
-   DBPASS
+    DBHOST 
+    DBNAME 
+    DBUSER 
+    DBPASS
 
 Edit ./config/nconf.php, set at least the following values: 
 
-   NCONFDIR 
-   NAGIOS_BIN
+    NCONFDIR 
+    NAGIOS_BIN
 
 
 6. Clean up
@@ -115,7 +115,7 @@ If you need authentication, configure ./config/authentication.php appropriately.
 Make a backup copy of your whole 'nconf/' folder and create a dump of your 'nconf' database. 
 The update process will not overwrite your configuration, but if you have made changes to any other files, these changes will be lost! This is also true for icons that you might have installed manually ('img/logos/base/'). 
 
-    Example: 
+Example: 
 
     cp -rp nconf/ nconf.BAK 
     mysqldump -u DBUSER -p DBNAME > nconf-dbdump.sql
@@ -124,7 +124,7 @@ The update process will not overwrite your configuration, but if you have made c
 2. Download and unpack
 Download and unpack the NConf archive to a temporary location on your webserver. 
 
-    Example: 
+Example: 
 
     tar -zxf nconf-VERSION.tgz -C /tmp/
 
@@ -132,7 +132,7 @@ Download and unpack the NConf archive to a temporary location on your webserver.
 3. Update existing files
 Copy the unpacked files to the 'nconf/' folder and overwrite any existing files of your current NConf installation. 
 
-    Example: 
+Example: 
 
     /bin/cp -rv /tmp/nconf/* /path/to/nconf/  (specify the full path to the 'cp' binary!)
 
@@ -142,10 +142,10 @@ This step cannot be undone! Make sure you have made a backup of your 'nconf/' fo
 4. Check permissions
 Make sure the following directories are still writable for your webserver user:
 
-   ./config 
-   ./output 
-   ./static_cfg
-   ./temp
+    ./config 
+    ./output 
+    ./static_cfg
+    ./temp
 
 
 5. Update the database
@@ -176,10 +176,10 @@ If you were using additional icons prior to the update, you will have to copy th
 8. Clean up
 Finally, remove the following files and directories:
 
-   * INSTALL
-   * INSTALL.php
-   * UPDATE
-   * UPDATE.php 
+    INSTALL
+    INSTALL.php
+    UPDATE
+    UPDATE.php 
 
 The update should now be complete.
 
