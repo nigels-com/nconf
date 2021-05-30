@@ -46,7 +46,7 @@ Security considerations:
 NConf is intended to be deployed within a private network or intranet. As such, development focus is clearly not that of a secure Internet application. Although it can be run anywhere, we do not advise users to publish NConf as a public site. 
 
 
-## Manual_Installation
+## Installation
 
 1. Download and unpack
 Download and unpack the NConf archive to your webserver's document root folder. 
@@ -109,7 +109,7 @@ http://www.monitoringexchange.org/p/47
 If you need authentication, configure ./config/authentication.php appropriately.
 
 
-## Manual_Update
+## Update
 
 1. Backup
 Make a backup copy of your whole 'nconf/' folder and create a dump of your 'nconf' database. 
