@@ -1,5 +1,7 @@
-NConf README
-============
+NConf
+=====
+
+NConf is a PHP based web-tool for configuring the Nagios monitoring software. It differs from similar tools by offering enterprise-class features like templates, dependencies and the ability to configure a large-scale, distributed Nagios topology.
 
 **NConf is not dead.** It's just no longer developed by the original developer(s). Here is the most current NConf build, maintained by Robbie Ferguson for NEMS Linux.
 
@@ -36,10 +38,12 @@ php.ini settings:
 * magic_quotes_gpc = Off 
 
 Compatibility:
+
 NConf has been tested on Red Hat, Fedora and CentOS Linux.
 It has not been tested on Windows or any UNIX, or with SELinux.
 
 Security considerations:
+
 NConf is intended to be deployed within a private network or intranet. As such, development focus is clearly not that of a secure Internet application. Although it can be run anywhere, we do not advise users to publish NConf as a public site. 
 
 
@@ -130,7 +134,7 @@ Download and unpack the NConf archive to a temporary location on your webserver.
 Example: 
 
 ````bash
-tar -zxf nconf-VERSION.tgz -C /tmp/
+$ tar -zxf nconf-VERSION.tgz -C /tmp/
 ````
 
 3. Update existing files
@@ -139,7 +143,7 @@ Copy the unpacked files to the 'nconf/' folder and overwrite any existing files 
 Example: 
 
 ````bash
-/bin/cp -rv /tmp/nconf/* /path/to/nconf/  (specify the full path to the 'cp' binary!)
+$ /bin/cp -rv /tmp/nconf/* /path/to/nconf/  (specify the full path to the 'cp' binary!)
 ````
 
 This step cannot be undone! Make sure you have made a backup of your 'nconf/' folder. 
