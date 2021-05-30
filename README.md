@@ -14,13 +14,12 @@ NConf README
 Table of contents
 -----------------
 
-* [Requirements](#Requirements)
-* [Manual Installation](#Manual_Installation)
-* [Manual Update](#Manual_Update)
+1. [Requirements](#Requirements)
+2. [Manual Installation](#Manual_Installation)
+3. [Manual Update](#Manual_Update)
 
 
 ## Requirements
----------------
 
 NConf system requirements:
 
@@ -48,7 +47,6 @@ NConf is intended to be deployed within a private network or intranet. As such, 
 
 
 ## Manual Installation
-----------------------
 
 1. Download and unpack
 Download and unpack the NConf archive to your webserver's document root folder. 
@@ -112,7 +110,6 @@ If you need authentication, configure ./config/authentication.php appropriately.
 
 
 ## Manual Update
-----------------
 
 1. Backup
 Make a backup copy of your whole 'nconf/' folder and create a dump of your 'nconf' database. 
