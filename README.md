@@ -72,8 +72,8 @@ Create a new MySQL database for NConf, create a user to access the database, gra
 
 On the commandline, you would proceed like this: 
 
-````SQL
-$> mysql -u root -p
+````bash
+$ mysql -u root -p
 Enter password:
 mysql> CREATE DATABASE DBNAME;
 mysql> GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER ON `DBNAME`.* TO 'DB_USER'@'localhost' IDENTIFIED BY 'DB_PASS';
