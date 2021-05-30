@@ -67,6 +67,7 @@ Make sure the following directories are writable for your webserver user:
 ````
 
 3. Create the database
+
 Create a new MySQL database for NConf, create a user to access the database, grant the appropriate privileges (make sure InnoDB for MySQL is set up properly prior to creating the database). 
 
 On the commandline, you would proceed like this: 
@@ -88,6 +89,7 @@ $ mysql -u DBUSER -p DBNAME < INSTALL/create_database.sql
 ````
 
 5. Configure NConf
+
 Copy the contents of ./config.orig to ./config. Make sure you also copy the hidden files. 
 
 Edit ./config/mysql.php, set at least the following values: 
@@ -107,21 +109,25 @@ NAGIOS_BIN
 ````
 
 6. Clean up
+
 Remove the INSTALL and UPDATE folders, as well as the INSTALL.php and UPDATE.php scripts. 
 
 7. Get OS logo icons (optional, but nice)
+
 If you like, download the OS logo icons and unpack them to ./img/logos/base/ 
 
 The icons can be downloaded here:
 http://www.monitoringexchange.org/p/47
 
 8. Authentication
+
 If you need authentication, configure ./config/authentication.php appropriately.
 
 
 ## Update
 
 1. Backup
+
 Make a backup copy of your whole 'nconf/' folder and create a dump of your 'nconf' database. 
 The update process will not overwrite your configuration, but if you have made changes to any other files, these changes will be lost! This is also true for icons that you might have installed manually ('img/logos/base/'). 
 
@@ -133,6 +139,7 @@ $ mysqldump -u DBUSER -p DBNAME > nconf-dbdump.sql
 ````
 
 2. Download and unpack
+
 Download and unpack the NConf archive to a temporary location on your webserver. 
 
 Example: 
@@ -142,6 +149,7 @@ $ tar -zxf nconf-VERSION.tgz -C /tmp/
 ````
 
 3. Update existing files
+
 Copy the unpacked files to the 'nconf/' folder and overwrite any existing files of your current NConf installation. 
 
 Example: 
@@ -154,6 +162,7 @@ This step cannot be undone! Make sure you have made a backup of your 'nconf/' fo
 
 
 4. Check permissions
+
 Make sure the following directories are still writable for your webserver user:
 
 ````
@@ -164,6 +173,7 @@ Make sure the following directories are still writable for your webserver user:
 ````
 
 5. Update the database
+
 The 'UPDATE/' folder contains a subfolder for each previous release of NConf. The folders are named like this: x.x.x_to_y.y.y 
 
 Make sure you know your current version of NConf. Next, chose the appropriate folder and look for a script named update_database_x.x.x_to_y.y.y.sql. 
@@ -180,6 +190,7 @@ Important: make sure you don't skip any updates, and that you apply ALL of them 
 
 
 6. Additional tasks
+
 Check the version-specific 'README' file within the current subfolder for update-related instructions. If you have applied more than one update, make sure you study all README files in all subfolders. These files contain important instructions about necessary config changes etc. 
 
 The release notes for the current release can also be found here:
@@ -187,10 +198,11 @@ http://www.nconf.org/dokuwiki/doku.php?id=nconf:download:releasenotes
 
 
 7. Restore icons (optional)
+
 If you were using additional icons prior to the update, you will have to copy these back from your backup folder. 
 
-
 8. Clean up
+
 Finally, remove the following files and directories:
 
 ````
