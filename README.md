@@ -3,31 +3,25 @@ NConf README
 
 **NConf is not dead.** It's just no longer developed by the original developer(s). Here is the most current NConf build, maintained by Robbie Ferguson for NEMS Linux.
 
-NConf homepage:
-http://www.nconf.org/
+[NConf](http://www.nconf.org/)
 
-NEMS homepage:
-https://nemslinux.com/
+[NEMS](https://nemslinux.com/)
 
 **THIS VERSION HAS BEEN RE-WORKED BY ROBBIE FERGUSON TO OPERATE UNDER PHP 7.0+ / mySQLi**
 
 
-
-
-Start guide:
-http://www.nconf.org/dokuwiki/doku.php?id=nconf:help:documentation:start:main
-
-Complete documentation:
-http://www.nconf.org/dokuwiki/doku.php?id=nconf:help:documentation:detail:main
+[Start guide](http://www.nconf.org/dokuwiki/doku.php?id=nconf:help:documentation:start:main)
+[Complete documentation](http://www.nconf.org/dokuwiki/doku.php?id=nconf:help:documentation:detail:main)
 
 Table of contents
 -----------------
-A. Requirements
-B. Manual installation
-C. Manual update
+
+[A. Requirements](#A. Requirements)
+[B. Manual Installation](#B. Manual Installation)
+[C. Manual Update](#C. Manual Update)
 
 
-A. Requirements
+##A. Requirements
 ---------------
 
 NConf system requirements:
@@ -55,7 +49,7 @@ Security considerations:
 NConf is intended to be deployed within a private network or intranet. As such, development focus is clearly not that of a secure Internet application. Although it can be run anywhere, we do not advise users to publish NConf as a public site. 
 
 
-B. Manual installation
+##B. Manual Installation
 ----------------------
 
 1. Download and unpack
@@ -119,7 +113,7 @@ http://www.monitoringexchange.org/p/47
 If you need authentication, configure ./config/authentication.php appropriately.
 
 
-C. Manual update
+##C. Manual Update
 ----------------
 
 1. Backup
