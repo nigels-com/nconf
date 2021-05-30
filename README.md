@@ -33,9 +33,11 @@ Table of contents
 
 ### php.ini settings
 
-* short_open_tag = On
-* register_globals = Off
-* magic_quotes_gpc = Off 
+````
+short_open_tag = On
+register_globals = Off
+magic_quotes_gpc = Off 
+````
 
 ### Compatibility
 
