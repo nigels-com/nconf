@@ -10,7 +10,7 @@ NConf is a PHP based web-tool for configuring the Nagios monitoring software. It
 
 **THIS VERSION HAS BEEN RE-WORKED BY ROBBIE FERGUSON TO OPERATE UNDER PHP 7.0+ / mySQLi**
 
-Original documentation:
+Original documentation (circa 2011)
 
 * [Start Guide](https://www.nconf.org/wordpress/wp-content/uploads/Start-guide.pdf)
 * [Installation Guide](http://www.nconf.org/wordpress/wp-content/uploads/Installation-guide.pdf)
