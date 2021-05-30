@@ -23,7 +23,7 @@ Table of contents
 
 ## Requirements
 
-NConf system requirements:
+### System Requirements
 
 * Apache webserver
 * PHP 7 or higher, php-mysql, php-ldap (only if using LDAP auth)
@@ -31,18 +31,18 @@ NConf system requirements:
 * Perl 5.6 or higher, perl-DBI, perl-DBD-MySQL
 * Nagios 3.x or Icinga 0.8x (binary necessary for testing generated config)
 
-php.ini settings:
+### php.ini settings
 
 * short_open_tag = On
 * register_globals = Off
 * magic_quotes_gpc = Off 
 
-Compatibility:
+### Compatibility
 
 NConf has been tested on Red Hat, Fedora and CentOS Linux.
 It has not been tested on Windows or any UNIX, or with SELinux.
 
-Security considerations:
+### Security considerations
 
 NConf is intended to be deployed within a private network or intranet. As such, development focus is clearly not that of a secure Internet application. Although it can be run anywhere, we do not advise users to publish NConf as a public site. 
 
