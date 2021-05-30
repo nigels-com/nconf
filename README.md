@@ -52,9 +52,11 @@ NConf is intended to be deployed within a private network or intranet. As such, 
 ## Installation
 
 1. Download and unpack
+
 Download and unpack the NConf archive to your webserver's document root folder. 
 
 2. Set permissions
+
 Make sure the following directories are writable for your webserver user: 
 
 ````
