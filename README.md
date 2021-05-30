@@ -14,9 +14,9 @@ NConf README
 Table of contents
 -----------------
 
-1. [Requirements](#Requirements)
-2. [Manual Installation](#Manual_Installation)
-3. [Manual Update](#Manual_Update)
+1. [Requirements](#1._Requirements)
+2. [Manual Installation](#2._Manual_Installation)
+3. [Manual Update](#2._Manual_Update)
 
 
 ## 1. Requirements
