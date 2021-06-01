@@ -87,7 +87,7 @@ Please refer to the MySQL manual on how to set up InnoDB (the steps might vary d
 :information_source: MySQL 8.0 for Ubuntu 20.04 includes InnoDB as the default engine.
 
 ```bash
-$ echo 'SHOW ENGINES;' | sudo mysql DBNAME -p | grep InnoDB
+$ echo 'SHOW ENGINES;' | mysql DBNAME -u root -p | grep InnoDB
 Enter password:
 InnoDB  DEFAULT Supports transactions, row-level locking, and foreign keys  YES YES YES
 ```
