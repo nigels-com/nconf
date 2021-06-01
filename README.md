@@ -72,6 +72,31 @@ Make sure the following directories are writable for your webserver user:
 
 
 3. Create the database
+
+---
+:information_source: Confirming that MySQL is installed and running (Ubuntu 20.04)
+
+```bash
+$ sudo apt install mysql-server
+...
+$ sudo systemctl status mysql
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+     Active: inactive (dead)
+$ sudo systemctl start mysql
+$ sudo systemctl status mysql
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2021-06-01 09:20:17 AEST; 1s ago
+    Process: 944391 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+   Main PID: 944421 (mysqld)
+     Status: "Server is operational"
+      Tasks: 38 (limit: 28775)
+     Memory: 332.6M
+     CGroup: /system.slice/mysql.service
+             └─944421 /usr/sbin/mysqld```
+---
+
 Create a new MySQL database for NConf, create a user to access the database, grant the appropriate privileges (make sure InnoDB for MySQL is set up properly prior to creating the database). 
 
 On the commandline, you would proceed like this: 
