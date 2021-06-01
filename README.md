@@ -94,7 +94,8 @@ $ sudo systemctl status mysql
       Tasks: 38 (limit: 28775)
      Memory: 332.6M
      CGroup: /system.slice/mysql.service
-             └─944421 /usr/sbin/mysqld```
+             └─944421 /usr/sbin/mysqld
+```
 ---
 
 Create a new MySQL database for NConf, create a user to access the database, grant the appropriate privileges (make sure InnoDB for MySQL is set up properly prior to creating the database). 
