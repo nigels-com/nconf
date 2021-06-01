@@ -83,13 +83,15 @@ On the commandline, you would proceed like this:
 
 Please refer to the MySQL manual on how to set up InnoDB (the steps might vary depending on your OS distribution). 
 
-    :information_source: MySQL 8.0 for Ubuntu 20.04 includes InnoDB as the default engine.
+---
+:information_source: MySQL 8.0 for Ubuntu 20.04 includes InnoDB as the default engine.
 
-    ```bash
-    $ echo 'SHOW ENGINES;' | sudo mysql DBNAME -p | grep InnoDB
-    Enter password:
-    InnoDB  DEFAULT Supports transactions, row-level locking, and foreign keys  YES YES YES
-    ```
+```bash
+$ echo 'SHOW ENGINES;' | sudo mysql DBNAME -p | grep InnoDB
+Enter password:
+InnoDB  DEFAULT Supports transactions, row-level locking, and foreign keys  YES YES YES
+```
+---
 
 4. Create the database structure
 
