@@ -74,7 +74,7 @@ Make sure the following directories are writable for your webserver user:
 3. Create the database
 
 ---
-:information_source: Confirm that MySQL is installed and running (on Ubuntu 20.04)
+:information_source: Confirm that MySQL is installed and running (via apt and systemctl on Ubuntu 20.04)
 
 ```bash
 $ sudo apt install mysql-server
