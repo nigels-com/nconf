@@ -98,6 +98,17 @@ $ sudo systemctl status mysql
 ```
 ---
 
+---
+:information_source: Confirm that 
+[InnoDB](https://dev.mysql.com/doc/refman/8.0/en/innodb-check-availability.html) is the default engine.
+
+```bash
+$ echo 'SHOW ENGINES;' | mysql DBNAME -u root -p | grep InnoDB
+Enter password:
+InnoDB  DEFAULT Supports transactions, row-level locking, and foreign keys  YES YES YES
+```
+---
+
 Create a new MySQL database for NConf, create a user to access the database, grant the appropriate privileges (make sure InnoDB for MySQL is set up properly prior to creating the database). 
 
 On the commandline, you would proceed like this: 
@@ -108,17 +119,6 @@ On the commandline, you would proceed like this:
    mysql> GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER ON `DBNAME`.* TO 'DB_USER'@'localhost' IDENTIFIED BY 'DB_PASS';
 
 Please refer to the MySQL manual on how to set up InnoDB (the steps might vary depending on your OS distribution). 
-
----
-:information_source: MySQL 8.0 for Ubuntu 20.04 includes
-[InnoDB](https://dev.mysql.com/doc/refman/8.0/en/innodb-check-availability.html) as the default engine.
-
-```bash
-$ echo 'SHOW ENGINES;' | mysql DBNAME -u root -p | grep InnoDB
-Enter password:
-InnoDB  DEFAULT Supports transactions, row-level locking, and foreign keys  YES YES YES
-```
----
 
 4. Create the database structure
 
