@@ -110,7 +110,8 @@ On the commandline, you would proceed like this:
 Please refer to the MySQL manual on how to set up InnoDB (the steps might vary depending on your OS distribution). 
 
 ---
-:information_source: MySQL 8.0 for Ubuntu 20.04 includes InnoDB as the default engine.
+:information_source: MySQL 8.0 for Ubuntu 20.04 includes
+[InnoDB](https://dev.mysql.com/doc/refman/8.0/en/innodb-check-availability.html) as the default engine.
 
 ```bash
 $ echo 'SHOW ENGINES;' | mysql DBNAME -u root -p | grep InnoDB
