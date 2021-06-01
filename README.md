@@ -96,9 +96,6 @@ $ sudo systemctl status mysql
      CGroup: /system.slice/mysql.service
              └─944421 /usr/sbin/mysqld
 ```
----
-
----
 :information_source: Confirm that 
 [InnoDB](https://dev.mysql.com/doc/refman/8.0/en/innodb-check-availability.html) is the default engine.
 
